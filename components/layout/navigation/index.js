@@ -27,8 +27,8 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            <Link href='/works'>
-              <a onClick={clickHandler}>Portfilio</a>
+            <Link href='/portfolio'>
+              <a onClick={clickHandler}>Portfolio</a>
             </Link>
           </li>
           <li>
