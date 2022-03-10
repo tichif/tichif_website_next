@@ -17,23 +17,23 @@ const Navigation = () => {
       <div className={`navigation${active ? ' active' : ''}`}>
         <ul>
           <li>
-            <Link href='/' onClick={clickHandler}>
-              <a>Accueil</a>
+            <Link href='/'>
+              <a onClick={clickHandler}>Accueil</a>
             </Link>
           </li>
           <li>
-            <Link href='/services' onClick={clickHandler}>
-              <a>Services</a>
+            <Link href='/services'>
+              <a onClick={clickHandler}>Services</a>
             </Link>
           </li>
           <li>
-            <Link href='/works' onClick={clickHandler}>
-              <a>Portfilio</a>
+            <Link href='/works'>
+              <a onClick={clickHandler}>Portfilio</a>
             </Link>
           </li>
           <li>
-            <Link href='/contact' onClick={clickHandler}>
-              <a>Contact</a>
+            <Link href='/contact'>
+              <a onClick={clickHandler}>Contact</a>
             </Link>
           </li>
         </ul>
