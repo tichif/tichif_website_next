@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Layout from '../components/layout';
 
 const Portfolio = () => {
@@ -58,7 +60,13 @@ const Portfolio = () => {
         <div className='portfolio'>
           {works.map((item, i) => (
             <div className='item' key={i}>
-              <img src={item.image} alt={item.name} />
+              <Image
+                src={item.image}
+                alt={item.name}
+                width='300'
+                height='180'
+              />
+              {/* <img src={item.image} alt={item.name} /> */}
               <div className='action'>
                 <a
                   href={item.link}

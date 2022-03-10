@@ -238,10 +238,10 @@ section.home {
   margin: 5px;
 }
 
-.portfolio .item img {
+/* .portfolio .item img {
   width: 100%;
   height: 60%;
-}
+} */
 
 .portfolio .item .action {
   position: absolute;
