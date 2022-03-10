@@ -1,0 +1,46 @@
+.homeImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.homeContent {
+  z-index: 10;
+  max-width: 600px;
+  position: relative;
+}
+
+.homeContent p {
+  font-size: 0.9rem;
+}
+
+.homeContent button {
+  border: none;
+}
+
+.homeContent button:hover {
+  background: #111;
+}
+
+.homeContent small {
+  margin-top: 0;
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+.homeContent h3 {
+  font-size: 30px;
+}
+
+@media (max-width: 1068px) {
+  .homeImage {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContent h3 {
+    font-size: 1.17rem;
+  }
+}

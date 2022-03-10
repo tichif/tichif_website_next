@@ -1,0 +1,52 @@
+{
+  "home" : {
+    "desc" : "Un développeur web à la recherche de l'opportunité d'apporter ses compétences et de les appliquer dans un environnement de travail qui l'encouragera à progresser et à acquérir de nouvelles connaissances, dans l'intention d'aider l'entreprise à atteindre ses objectifs.",
+    "button" : "Téléchager CV",
+    "title": "Accueil"
+  },
+  "navigation": {
+    "1" : "Accueil",
+    "2" : "Services",
+    "3" : "Portfolio",
+    "4" : "Contact"
+  },
+  "contact": {
+    "text" : "Ecrivez moi pour avoir plus d'informations sur les services que j'offre, pour prendre rendez-vous, ou tout simplement pour me dire bonjour 😉🙂🙋🏾",
+    "phone" : "Téléphone",
+    "address" : "Adresse",
+    "firstname" : "Prénom",
+    "lastname": "Nom",
+    "subject": "Sujet",
+    "title" : "Contactez moi",
+    "button" : "Envoyer"
+  },
+  "work": {
+    "text" : "En utilisant les meilleurs technologies possibles, ma priorité est de satisfaire complètement mes clients en abordant chaque projet avec professionalisme, dévouement. Cliquez sur le projet en question pour avoir une idée globale sur celui-ci.",
+    "button" : "Visiter",
+    "title": "Certains de mes meilleurs travaux"
+  },
+  "services" : {
+    "title" : "Les services que j'offre",
+    "text": "J'offre plusieurs services dans le domaine du développement web. Créer votre site web, augment votre présence en ligne ou devenez rapidement un développeur grace aux prix imbattables sur le marché. ",
+    "dev": {
+      "title" : "Développement",
+      "text" : "Création de votre site ou application web en utilisant les dernières technologies telles que React, Express, Docker, Kubernetes, Mongo DB."
+    },
+    "hosting": {
+      "title" : "Hébergement",
+      "text" : "Déploiement de votre site ou application web sur les plateformes d'hébergement Digital Ocean, Heroku, Netlify."
+    },
+    "seo": {
+      "title" : "SEO",
+      "text" : "Renforcement de votre présence sur le web grace aux méthodes de référencement et d'optimisation."
+    },
+    "consultation": {
+      "title" : "Consultation",
+      "text" : "Etude d'opportunité pour la réalisation de site ou d'application web."
+    },
+    "formation": {
+      "title" : "Formation",
+      "text" : "Formation continue en ligne et en présentielle."
+    }
+  }
+}

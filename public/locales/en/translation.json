@@ -1,0 +1,52 @@
+{
+  "home" : {
+    "desc" : "A web developer looking for the opportunity to bring his skills and apply them in a work environment that will encourage him to progress and acquire new knowledge, with the intention of helping the company achieve its goals.",
+    "button" : "Download CV",
+    "title": "Home"
+  },
+  "navigation": {
+    "1" : "Home",
+    "2" : "Services",
+    "3" : "Portfolio",
+    "4" : "Contact"
+  },
+  "contact": {
+    "text" : "Contact me to get more information about the services I offer, to make an appointment, or just to say hello😉🙂🙋🏾‍♂️",
+    "phone" : "Phone",
+    "address" : "Address",
+    "firstname" : "Firstname",
+    "lastname": "Lastname",
+    "subject": "Subject",
+    "title" : "Contact me",
+    "button" : "Send"
+  },
+  "work": {
+    "text" : "Using the best possible technologies, my priority is to completely satisfy my clients by approaching each project with professionalism, dedication. Click on each project in to get an overall idea of it.",
+    "button" : "Visit",
+    "title": "Some of my best work"
+  },
+  "services" : {
+    "title" : "The services I offer",
+    "text": "I offer several services in the field of web development. Create your website, increase your online presence or quickly become a developer with a lower price.",
+    "dev": {
+      "title" : "Development",
+      "text" : "Create your website or web application using the latest technologies such as React, Express, Docker, Kubernetes, Mongo DB."
+    },
+    "hosting": {
+      "title" : "Hosting",
+      "text" : "Deploy  your website or web application on Digital Ocean, Heroku, Netlify hosting platforms."
+    },
+    "seo": {
+      "title" : "SEO",
+      "text" : "Enhance your presence on the web thanks to search engine optimization methods."
+    },
+    "consultation": {
+      "title" : "Consultation",
+      "text" : "Opportunity study for the realization of website or web application."
+    },
+    "formation": {
+      "title" : "Formation",
+      "text" : "Online and face-to-face continuing education."
+    }
+  }
+}
