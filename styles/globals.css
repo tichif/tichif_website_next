@@ -56,8 +56,56 @@ section.home {
   transform: scale(0.98);
 }
 
+/* ############ HomePage ########### */
+.home-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.home-content {
+  z-index: 10;
+  max-width: 600px;
+  position: relative;
+}
+
+.home-content p {
+  font-size: 0.9rem;
+}
+
+.home-content button {
+  border: none;
+}
+
+.home-content button:hover {
+  background: #111;
+}
+
+.home-content small {
+  margin-top: 0;
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+.home-content h3 {
+  font-size: 30px;
+}
+
 @media (max-width: 1068px) {
   section {
     padding: 100px 40px;
+  }
+
+  /* ######## HomePage ########## */
+  .home-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ######### HomePage ####### */
+  .home-content h3 {
+    font-size: 1.17rem;
   }
 }

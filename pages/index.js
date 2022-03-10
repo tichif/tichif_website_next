@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 
 const clickHandler = () => {
   console.log('ok');
@@ -6,9 +6,9 @@ const clickHandler = () => {
 
 const HomePage = () => {
   return (
-    <section className={styles.home}>
-      <img src='/images/home.jpg' alt='tichif' className={styles.homeImage} />
-      <div className={styles.homeContent}>
+    <section className='home'>
+      <img src='/images/home.jpg' alt='tichif' className='home-image' />
+      <div className='home-content'>
         <h3>Dalzon Charles-Hébert</h3>
         <small>Fullstack web developer</small>
         <p>Description</p>
