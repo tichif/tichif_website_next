@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import Layout from '../components/layout';
 
 const Portfolio = () => {
+  const router = useRouter();
   const works = [
     {
       name: 'TK Boutique',
@@ -49,11 +51,15 @@ const Portfolio = () => {
     <Layout title='Porfolio'>
       <section>
         <div className='title'>
-          <h1>Some of my best work</h1>
+          <h1>
+            {router.locale === 'en-US'
+              ? 'Some of my best work'
+              : 'Certains de mes meilleurs travaux'}
+          </h1>
           <p>
-            Using the best possible technologies, my priority is to completely
-            satisfy my clients by approaching each project with professionalism,
-            dedication. Click on each project in to get an overall idea of it.
+            {router.locale === 'en-US'
+              ? 'Using the best possible technologies, my priority is to completely satisfy my clients by approaching each project with professionalism, dedication. Click on each project in to get an overall idea of it.'
+              : 'En utilisant les meilleurs technologies possibles, ma priorité est de satisfaire complètement mes clients en abordant chaque projet avec professionalisme, dévouement. Cliquez sur le projet en question pour avoir une idée globale sur celui-ci.'}
           </p>
         </div>
 
@@ -66,7 +72,6 @@ const Portfolio = () => {
                 width='300'
                 height='180'
               />
-              {/* <img src={item.image} alt={item.name} /> */}
               <div className='action'>
                 <a
                   href={item.link}
@@ -74,7 +79,7 @@ const Portfolio = () => {
                   onClick={() => onClickHandler(item)}
                   rel='noopener noreferrer'
                 >
-                  Visit
+                  {router.locale === 'en-US' ? 'Visit' : 'Visiter'}
                 </a>
               </div>
             </div>
