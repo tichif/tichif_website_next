@@ -14,6 +14,16 @@ const Navigation = () => {
     dispatch(toggleNavigation(false));
   };
 
+  const changeLocal = (local) => {
+    router.push(
+      { pathname: router.pathname, query: router.query },
+      router.asPath,
+      {
+        locale: local,
+      }
+    );
+  };
+
   return (
     <>
       <div className={`navigation${active ? ' active' : ''}`}>
@@ -88,10 +98,18 @@ const Navigation = () => {
           </ul>
           <ul className='lang-icon'>
             <li>
-              <img src='/images/french.png' alt='french' />
+              <img
+                src='/images/french.png'
+                alt='french'
+                onClick={() => changeLocal('fr')}
+              />
             </li>
             <li>
-              <img src='/images/usa.png' alt='usa' />
+              <img
+                src='/images/usa.png'
+                alt='usa'
+                onClick={() => changeLocal('en-US')}
+              />
             </li>
           </ul>
         </div>
