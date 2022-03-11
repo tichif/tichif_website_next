@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
 
 import Layout from '../components/layout';
 import Spinner from '../components/layout/Spinner';
@@ -11,6 +12,7 @@ import { contact, clearNotifications } from '../redux/actions/contact';
 
 const ContactPage = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const { loading, success, error, message } = useSelector(
     (state) => state.contact
@@ -29,10 +31,11 @@ const ContactPage = () => {
     <Layout title='Contactez moi'>
       <section>
         <div className='title'>
-          <h1>Contactez moi</h1>
+          <h1>{router.locale === 'en-US' ? 'Contact me' : 'Contactez moi'}</h1>
           <p>
-            Contact me to get more information about the services I offer, to
-            make an appointment, or just to say hello😉🙂🙋🏾‍♂️
+            {router.locale === 'en-US'
+              ? 'Contact me to get more information about the services I offer, to make an appointment, or just to say hello😉🙂🙋🏾‍♂️'
+              : "Ecrivez moi pour avoir plus d'informations sur les services que j'offre, pour prendre rendez-vous, ou tout simplement pour me dire bonjour 😉🙂🙋🏾"}
           </p>
         </div>
         <div className='contact'>
@@ -68,7 +71,9 @@ const ContactPage = () => {
                         <Field
                           type='text'
                           name='firstName'
-                          placeholder='Firstname'
+                          placeholder={
+                            router.locale === 'en-US' ? 'Firstname' : 'Prénom'
+                          }
                         />
                         <ErrorMessage
                           name='firstName'
@@ -80,7 +85,9 @@ const ContactPage = () => {
                         <Field
                           type='text'
                           name='lastName'
-                          placeholder='Lastname'
+                          placeholder={
+                            router.locale === 'en-US' ? 'Lastname' : 'Nom'
+                          }
                         />
                         <ErrorMessage
                           name='lastName'
@@ -102,7 +109,9 @@ const ContactPage = () => {
                         <Field
                           type='text'
                           name='subject'
-                          placeholder='Subject'
+                          placeholder={
+                            router.locale === 'en-US' ? 'Subject' : 'Sujet'
+                          }
                         />
                         <ErrorMessage
                           name='subject'
@@ -127,7 +136,9 @@ const ContactPage = () => {
                     </div>
                     <div className='row'>
                       <div className='input100'>
-                        <button type='submit'>Send</button>
+                        <button type='submit'>
+                          {router.locale === 'en-US' ? 'Send' : 'Envoyer'}
+                        </button>
                       </div>
                     </div>
                   </Form>
@@ -143,7 +154,7 @@ const ContactPage = () => {
                 className='contact-icon'
               />
               <div className='details'>
-                <h4>Address</h4>
+                <h4>{router.locale === 'en-US' ? 'Address' : 'Adresse'}</h4>
                 <p>35, rue Chavannes Prol. Pétion-Ville, Haïti</p>
               </div>
             </div>
@@ -167,7 +178,7 @@ const ContactPage = () => {
             <div className='info-box'>
               <img src='/images/call.png' alt='Call' className='contact-icon' />
               <div className='details'>
-                <h4>Phone</h4>
+                <h4>{router.locale === 'en-US' ? 'Phone' : 'Téléphone'}</h4>
                 <p>(+509) 47116485 / 48803395 / 35651206</p>
               </div>
             </div>
