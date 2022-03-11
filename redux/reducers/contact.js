@@ -2,6 +2,7 @@ import {
   CONTACT_ERROR,
   CONTACT_REQUEST,
   CONTACT_SUCCESS,
+  CLEAR_NOTIFICATIONS,
 } from '../constants/contact';
 
 export const contactReducer = (state = {}, action) => {
@@ -21,6 +22,8 @@ export const contactReducer = (state = {}, action) => {
         loading: false,
         error: action.payload,
       };
+    case CLEAR_NOTIFICATIONS:
+      return {};
     default:
       return state;
   }

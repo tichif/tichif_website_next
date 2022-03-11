@@ -36,7 +36,7 @@ exports.contact = asyncHandler(async (req, res, next) => {
           : 'Votre message a été envoyé.',
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.response);
     return next(new ErrorResponse('Erreur. Veuillez essayer à nouveau.', 400));
   }
 });

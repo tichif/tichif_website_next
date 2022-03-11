@@ -1,11 +1,13 @@
-import React, { Fragment } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { toast } from 'react-toastify';
 
 import Layout from '../components/layout';
+import Spinner from '../components/layout/Spinner';
 import contactDefaultValue from '../validations/contactDefaultValues';
 import contactSchema from '../validations/yupContactValidation';
-import { contact } from '../redux/actions/contact';
+import { contact, clearNotifications } from '../redux/actions/contact';
 
 const ContactPage = () => {
   const dispatch = useDispatch();
@@ -13,6 +15,16 @@ const ContactPage = () => {
   const { loading, success, error, message } = useSelector(
     (state) => state.contact
   );
+
+  useEffect(() => {
+    if (error) {
+      toast.error();
+      dispatch(clearNotifications());
+    } else if (success) {
+      toast.success(message);
+    }
+  }, [error, success]);
+
   return (
     <Layout title='Contactez moi'>
       <section>
@@ -43,7 +55,9 @@ const ContactPage = () => {
                       language,
                     })
                   );
-                  resetForm();
+                  if (success) {
+                    resetForm();
+                  }
                   setSubmitting(false);
                 }}
               >

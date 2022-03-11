@@ -4,6 +4,7 @@ import {
   CONTACT_ERROR,
   CONTACT_REQUEST,
   CONTACT_SUCCESS,
+  CLEAR_NOTIFICATIONS,
 } from '../constants/contact';
 
 // contact action
@@ -34,4 +35,10 @@ export const contact = (options) => async (dispatch) => {
           : error.message,
     });
   }
+};
+
+export const clearNotifications = (dispatch) => {
+  dispatch({
+    type: CLEAR_NOTIFICATIONS,
+  });
 };
