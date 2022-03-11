@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
 import { toggleNavigation } from '../../../redux/actions/navigation';
 
 const Navigation = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const { active } = useSelector((state) => state.navigation);
 
@@ -18,22 +20,30 @@ const Navigation = () => {
         <ul>
           <li>
             <Link href='/'>
-              <a onClick={clickHandler}>Accueil</a>
+              <a onClick={clickHandler}>
+                {router.locale === 'en-US' ? 'Home' : 'Accueil'}
+              </a>
             </Link>
           </li>
           <li>
             <Link href='/services'>
-              <a onClick={clickHandler}>Services</a>
+              <a onClick={clickHandler}>
+                {router.locale === 'en-US' ? 'Services' : 'Services'}
+              </a>
             </Link>
           </li>
           <li>
             <Link href='/portfolio'>
-              <a onClick={clickHandler}>Portfolio</a>
+              <a onClick={clickHandler}>
+                {router.locale === 'en-US' ? 'Portfolio' : 'Portfolio'}
+              </a>
             </Link>
           </li>
           <li>
             <Link href='/contact'>
-              <a onClick={clickHandler}>Contact</a>
+              <a onClick={clickHandler}>
+                {router.locale === 'en-US' ? 'Contact' : 'Contact'}
+              </a>
             </Link>
           </li>
         </ul>
