@@ -7,9 +7,11 @@ const HomePage = () => {
 
   const clickHandler = () => {
     if (router.locale === 'en-US') {
-      console.log('OK');
+      location.href =
+        'https://res.cloudinary.com/di1rwb3im/image/upload/v1650328574/CV/cv_english_adab7w.jpg';
     } else {
-      console.log('OKEU');
+      location.href =
+        'https://res.cloudinary.com/di1rwb3im/image/upload/v1650328573/CV/cv_french_hxrzi0.jpg';
     }
   };
 
