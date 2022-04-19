@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 
 import Layout from '../components/layout';
+import { pageview } from '../hooks/useGATracker';
 
 const HomePage = () => {
   const router = useRouter();
