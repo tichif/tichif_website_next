@@ -47,7 +47,7 @@ const ContactPage = () => {
                 initialValues={contactDefaultValue}
                 validationSchema={contactSchema}
                 onSubmit={(values, { setSubmitting, resetForm }) => {
-                  const language = 'en';
+                  const language = router.locale === 'en-US' ? 'en' : 'fr';
                   setSubmitting(true);
                   dispatch(
                     contact({
