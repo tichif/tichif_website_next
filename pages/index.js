@@ -2,12 +2,16 @@ import { useRouter } from 'next/router';
 
 import Layout from '../components/layout';
 
-const clickHandler = () => {
-  console.log('ok');
-};
-
 const HomePage = () => {
   const router = useRouter();
+
+  const clickHandler = () => {
+    if (router.locale === 'en-US') {
+      console.log('OK');
+    } else {
+      console.log('OKEU');
+    }
+  };
 
   const description =
     router.locale === 'en-US'
